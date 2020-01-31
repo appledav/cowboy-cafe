@@ -4,14 +4,14 @@ using System.Text;
 
 namespace CowboyCafe.Data
 {
-    public class Trailburger
+    public class TexasTripleBurger
     {
         /// <summary>
-        /// the price of the trailburger
+        /// the price of the Texas Triple
         /// </summary>
         public double Price
         {
-            get => 4.50;
+            get => 6.45;
         }
 
         /// <summary>
@@ -19,7 +19,7 @@ namespace CowboyCafe.Data
         /// </summary>
         public uint Calories
         {
-            get => 288;
+            get => 698;
         }
 
         /// <summary>
@@ -50,6 +50,31 @@ namespace CowboyCafe.Data
         public bool Bun { get; set; } = true;
 
         /// <summary>
+        /// if tomato is included
+        /// </summary>
+        public bool Tomato { get; set; } = true;
+
+        /// <summary>
+        /// Is lettuce on the burger?
+        /// </summary>
+        public bool Lettuce { get; set; } = true;
+
+        /// <summary>
+        /// Does the customer want mayo
+        /// </summary>
+        public bool Mayo { get; set; } = true;
+
+        /// <summary>
+        /// IS bacon included?
+        /// </summary>
+        public bool Bacon { get; set; } = true;
+
+        /// <summary>
+        /// Does the customer want egg on their burger
+        /// </summary>
+        public bool Egg { get; set; } = true;
+
+        /// <summary>
         /// The list of special instructions on how to make the burger
         /// </summary>
         public List<string> SpecialInstructions
@@ -62,10 +87,16 @@ namespace CowboyCafe.Data
                 if (!Pickle) instructions.Add("hold pickle");
                 if (!Cheese) instructions.Add("hold cheese");
                 if (!Bun) instructions.Add("hold bun");
+                if (!Tomato) instructions.Add("hold tomato");
+                if (!Lettuce) instructions.Add("hold lettuce");
+                if (!Mayo) instructions.Add("hold mayo");
+                if (!Bacon) instructions.Add("hold bacon");
+                if (!Egg) instructions.Add("hold egg");
 
-                return instructions; 
+
+                return instructions;
             }
         }
-
     }
 }
+
