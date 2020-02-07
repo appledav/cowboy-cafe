@@ -1,15 +1,25 @@
-﻿using System;
+﻿/*
+
+* Author: David Apple
+
+* Class name: RustlersRibs.cs
+
+* Purpose: The class with the properties of the Rustlers Ribs
+
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace CowboyCafe.Data
 {
-    public class RustlersRibs
+    public class RustlersRibs: Entree
     {
         /// <summary>
         /// the price of the ribs
         /// </summary>
-        public double Price
+        public override double Price
         {
             get => 7.50;
         }
@@ -17,7 +27,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// the number of calories
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get => 894;
         }
@@ -26,7 +36,7 @@ namespace CowboyCafe.Data
          /// The list of special instructions to make 
          /// Rustler ribs
          /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

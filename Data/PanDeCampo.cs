@@ -2,9 +2,9 @@
 
 * Author: David Apple
 
-* Class name: CornDodgers.cs
+* Class name: PanDeCampo.cs
 
-* Purpose: The side class that inherits from side to implement CornDodgers
+* Purpose: The class to describe the PanDeCampo side
 
 */
 
@@ -14,9 +14,12 @@ using System.Text;
 
 namespace CowboyCafe.Data
 {
-    public class CornDodgers : Side
+    public class PanDeCampo : Side
     {
-        public override double Price
+        /// <summary>
+        /// the prices with their specific size
+        /// </summary>
+        public override double Price 
         {
             get
             {
@@ -32,9 +35,12 @@ namespace CowboyCafe.Data
                         throw new NotImplementedException();
                 }
             }
-
         }
 
+        
+        /// <summary>
+        /// the Calories in their specific sizes
+        /// </summary>
         public override uint Calories
         {
             get
@@ -42,11 +48,11 @@ namespace CowboyCafe.Data
                 switch (Size)
                 {
                     case Size.Small:
-                        return 512;
+                        return 227;
                     case Size.Medium:
-                        return 685;
+                        return 269;
                     case Size.Large:
-                        return 717;
+                        return 367;
                     default:
                         throw new NotImplementedException();
                 }

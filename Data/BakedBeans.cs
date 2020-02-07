@@ -2,10 +2,9 @@
 
 * Author: David Apple
 
-* Class name: CornDodgers.cs
+* Class name: BakedBeans.cs
 
-* Purpose: The side class that inherits from side to implement CornDodgers
-
+* Purpose: The side class that implements Baked Beans
 */
 
 using System;
@@ -14,8 +13,11 @@ using System.Text;
 
 namespace CowboyCafe.Data
 {
-    public class CornDodgers : Side
+    public class BakedBeans: Side
     {
+        /// <summary>
+        /// the prices with their specific size
+        /// </summary>
         public override double Price
         {
             get
@@ -32,9 +34,12 @@ namespace CowboyCafe.Data
                         throw new NotImplementedException();
                 }
             }
-
         }
 
+
+        /// <summary>
+        /// the Calories in their specific sizes
+        /// </summary>
         public override uint Calories
         {
             get
@@ -42,11 +47,11 @@ namespace CowboyCafe.Data
                 switch (Size)
                 {
                     case Size.Small:
-                        return 512;
+                        return 312;
                     case Size.Medium:
-                        return 685;
+                        return 378;
                     case Size.Large:
-                        return 717;
+                        return 410;
                     default:
                         throw new NotImplementedException();
                 }

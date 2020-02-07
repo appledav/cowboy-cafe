@@ -1,4 +1,14 @@
-﻿using System;
+﻿/*
+
+* Author: David Apple
+
+* Class name: ChiliCheeseFries.cs
+
+* Purpose: The side class that implements ChiliCheeseFries and its properties
+
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 

@@ -1,15 +1,27 @@
-﻿using System;
+﻿/*
+
+* Author: David Apple
+
+* Class name: Trailburger.cs
+
+* Purpose: The class to describe the trailburgers properties
+
+*/
+
+
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace CowboyCafe.Data
 {
-    public class Trailburger
+    public class Trailburger: Entree
     {
         /// <summary>
         /// the price of the trailburger
         /// </summary>
-        public double Price
+        public override double Price
         {
             get => 4.50;
         }
@@ -17,7 +29,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// the number of calories
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get => 288;
         }
@@ -52,7 +64,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// The list of special instructions on how to make the burger
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

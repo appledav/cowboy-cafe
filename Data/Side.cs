@@ -1,4 +1,14 @@
-﻿using System;
+﻿/*
+
+* Author: Nathan Bean
+
+* Class name: Side.cs
+
+* Purpose: The base class that the sides inherit from
+
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
