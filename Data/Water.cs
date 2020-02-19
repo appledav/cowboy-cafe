@@ -50,7 +50,18 @@ namespace CowboyCafe.Data
                 return instructions;
             }
         }
-            
-            
+
+
+        /// <summary>
+        /// The override method to display the actual name of the item
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return "Water";
+        }
+
+
+
     }
 }

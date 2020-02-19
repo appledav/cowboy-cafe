@@ -16,6 +16,9 @@ namespace CowboyCafe.Data
 {
     public class CornDodgers : Side
     {
+        /// <summary>
+        /// The price
+        /// </summary>
         public override double Price
         {
             get
@@ -35,6 +38,9 @@ namespace CowboyCafe.Data
 
         }
 
+        /// <summary>
+        /// The amount of calories in the corn dodgers
+        /// </summary>
         public override uint Calories
         {
             get
@@ -51,6 +57,15 @@ namespace CowboyCafe.Data
                         throw new NotImplementedException();
                 }
             }
+        }
+
+        /// <summary>
+        /// The override method to display the actual name of the item
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return "Corn Dodgers";
         }
     }
 }

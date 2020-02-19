@@ -79,5 +79,15 @@ namespace CowboyCafe.Data
         /// The enum to display each flavor of soda
         /// </summary>
         public SodaFlavor Flavor { get; set; }
+
+
+        /// <summary>
+        /// The override method to display the actual name of the item
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return "Jerked Soda";
+        }
     }
 }

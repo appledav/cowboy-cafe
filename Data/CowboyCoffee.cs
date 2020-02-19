@@ -26,7 +26,9 @@ namespace CowboyCafe.Data
         /// </summary>
         public bool RoomForCream { get; set; } = false;
 
-
+        /// <summary>
+        /// Is the coffee decaf or not
+        /// </summary>
         public bool Decaf { get; set; }
 
         /// <summary>
@@ -87,6 +89,15 @@ namespace CowboyCafe.Data
             }
         }
 
-        
+        /// <summary>
+        /// The override method to display the actual name of the item
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return "Cowboy Coffee";
+        }
+
+
     }
 }
