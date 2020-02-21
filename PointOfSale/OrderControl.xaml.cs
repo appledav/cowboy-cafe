@@ -59,7 +59,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         void AddToOrderTrailBurger(object sender, RoutedEventArgs e)
         {
-            OrderPanel.Items.Add(new Trailburger());
+            OrderPanel.Items.Add(new TrailBurger());
         }
 
         /// <summary>

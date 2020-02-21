@@ -98,7 +98,7 @@ namespace CowboyCafe.Data
             if (Decaf)
                 return Size + " Decaf Cowboy Coffee";
             else
-                return Size + " Caffinated Cowboy Coffee";
+                return Size + " Cowboy Coffee";
         }
 
 
