@@ -58,7 +58,7 @@ namespace CowboyCafe.Data
         /// <returns></returns>
         public override string ToString()
         {
-            return "Water";
+            return Size + " Water";
         }
 
 

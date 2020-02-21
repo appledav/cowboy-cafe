@@ -95,7 +95,10 @@ namespace CowboyCafe.Data
         /// <returns></returns>
         public override string ToString()
         {
-            return "Cowboy Coffee";
+            if (Decaf)
+                return Size + " Decaf Cowboy Coffee";
+            else
+                return Size + " Caffinated Cowboy Coffee";
         }
 
 

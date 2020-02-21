@@ -1,4 +1,16 @@
-﻿using System;
+﻿/*
+
+* Author: David Apple
+
+* Class name: OrderControl.xaml.cs
+
+* Purpose: The class that implements the Order control window
+*           All the click events are located in here to control the flow of the program
+
+*/
+
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
