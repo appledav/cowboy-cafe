@@ -31,9 +31,13 @@ namespace PointOfSale
     /// </summary>
     public partial class OrderControl : UserControl
     {
+        Order currentOrder;
         public OrderControl()
         {
+            currentOrder = new Order();
+            this.DataContext = currentOrder;
             InitializeComponent();
+            
             AddCowpokeChili.Click += AddToOrderCowpokeChili;
             AddAngryChicken.Click += AddToOrderAngryChicken;
             AddBakedBeans.Click += AddToOrderBakedBeans;
@@ -59,7 +63,15 @@ namespace PointOfSale
         /// <param name="e"></param>
         void AddToOrderTrailBurger(object sender, RoutedEventArgs e)
         {
-            OrderPanel.Items.Add(new TrailBurger());
+            //currentOrder.Add(new TrailBurger());
+            if (DataContext is Order data)
+            {
+                if (sender is Button button)
+                {
+                    data.Add(new TrailBurger());
+                }
+
+            }
         }
 
         /// <summary>
@@ -69,7 +81,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         void AddToOrderWater(object sender, RoutedEventArgs e)
         {
-            OrderPanel.Items.Add(new Water());
+            currentOrder.Add(new Water());
         }
 
         /// <summary>
@@ -79,7 +91,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         void AddToOrderTexasTripleBurger(object sender, RoutedEventArgs e)
         {
-            OrderPanel.Items.Add(new TexasTripleBurger());
+            currentOrder.Add(new TexasTripleBurger());
         }
 
         /// <summary>
@@ -89,7 +101,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         void AddToOrderTexasTea(object sender, RoutedEventArgs e)
         {
-            OrderPanel.Items.Add(new TexasTea());
+            currentOrder.Add(new TexasTea());
         }
 
         /// <summary>
@@ -99,7 +111,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         void AddToOrderRustlersRibs(object sender, RoutedEventArgs e)
         {
-            OrderPanel.Items.Add(new RustlersRibs());
+            currentOrder.Add(new RustlersRibs());
         }
 
         /// <summary>
@@ -109,7 +121,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         void AddToOrderPecosPulledPork(object sender, RoutedEventArgs e)
         {
-            OrderPanel.Items.Add(new PecosPulledPork());
+            currentOrder.Add(new PecosPulledPork());
         }
 
         /// <summary>
@@ -119,7 +131,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         void AddToOrderPanDeCampo(object sender, RoutedEventArgs e)
         {
-            OrderPanel.Items.Add(new PanDeCampo());
+            currentOrder.Add(new PanDeCampo());
         }
 
         /// <summary>
@@ -129,7 +141,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         void AddToOrderJerkedSoda(object sender, RoutedEventArgs e)
         {
-            OrderPanel.Items.Add(new JerkedSoda());
+            currentOrder.Add(new JerkedSoda());
         }
 
         /// <summary>
@@ -139,7 +151,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         void AddToOrderDakotaDoubleBurger(object sender, RoutedEventArgs e)
         {
-            OrderPanel.Items.Add(new DakotaDoubleBurger());
+            currentOrder.Add(new DakotaDoubleBurger());
         }
 
         /// <summary>
@@ -149,7 +161,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         void AddToOrderCowboyCoffee(object sender, RoutedEventArgs e)
         {
-            OrderPanel.Items.Add(new CowboyCoffee());
+            currentOrder.Add(new CowboyCoffee());
         }
 
         /// <summary>
@@ -159,7 +171,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         void AddToOrderCornDodgers(object sender, RoutedEventArgs e)
         {
-            OrderPanel.Items.Add(new CornDodgers());
+            currentOrder.Add(new CornDodgers());
         }
 
         /// <summary>
@@ -169,7 +181,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         void AddToOrderChiliCheeseFries(object sender, RoutedEventArgs e)
         {
-            OrderPanel.Items.Add(new ChiliCheeseFries());
+            currentOrder.Add(new ChiliCheeseFries());
         }
 
         /// <summary>
@@ -179,7 +191,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         void AddToOrderBakedBeans(object sender, RoutedEventArgs e)
         {
-            OrderPanel.Items.Add(new BakedBeans());
+            currentOrder.Add(new BakedBeans());
         }
 
         /// <summary>
@@ -189,7 +201,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         void AddToOrderAngryChicken(object sender, RoutedEventArgs e)
         {
-            OrderPanel.Items.Add(new AngryChicken());
+            currentOrder.Add(new AngryChicken());
         }
 
         /// <summary>
@@ -199,7 +211,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         void AddToOrderCowpokeChili(object sender, RoutedEventArgs e)
         {
-            OrderPanel.Items.Add(new CowpokeChili());
+            currentOrder.Add(new CowpokeChili());
         }
     }
 }

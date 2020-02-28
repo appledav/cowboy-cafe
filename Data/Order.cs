@@ -1,16 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
-    public class Order  
+    public class Order : INotifyPropertyChanged
     {
 
         /// <summary>
         /// the order number to be stored
         /// </summary>
-        private uint lastOrderNumber;
+        private static uint lastOrderNumber = 0;
+
+
+        public uint OrderNumber;
+
+        public Order()
+        {
+            OrderNumber = lastOrderNumber++;
+        }
+
+        /// <summary>
+        /// The event handler
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
         /// the list of items
@@ -34,9 +48,12 @@ namespace CowboyCafe.Data
                 {
                     total += item.Price;
                 }
+                
                 return total;
             }        
         }
+
+        
 
 
         /// <summary>
@@ -46,7 +63,9 @@ namespace CowboyCafe.Data
         public void Add(IOrderItem item)
         {
             items.Add(item);
-            
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items")); 
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
+
         }
 
         /// <summary>
@@ -56,6 +75,8 @@ namespace CowboyCafe.Data
         public void Remove(IOrderItem item) 
         {
             items.Remove(item);
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
         }
     }
 }

@@ -46,10 +46,7 @@
             <Button Name="AddWater">Water</Button>
         </StackPanel>
         <StackPanel Grid.Column ="3">
-            <TextBlock FontSize="18" TextAlignment="Center"> Order</TextBlock>
-            <ListView Name="OrderPanel" Grid.Column="3">
-                
-            </ListView>
+            <local:OrderSummaryControl/>
         </StackPanel>
         
     </Grid>
