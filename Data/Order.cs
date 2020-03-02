@@ -13,9 +13,14 @@ namespace CowboyCafe.Data
         /// </summary>
         private static uint lastOrderNumber = 0;
 
-
+        /// <summary>
+        /// A way of storing what order number we are on
+        /// </summary>
         public uint OrderNumber;
 
+        /// <summary>
+        /// Constructor to update order Number 
+        /// </summary>
         public Order()
         {
             OrderNumber = lastOrderNumber++;
@@ -34,7 +39,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// The list of Items in our order
         /// </summary>
-        public IEnumerable<IOrderItem> Items => items;
+        public IEnumerable<IOrderItem> Items => items.ToArray();
 
         /// <summary>
         /// The total cost of our order

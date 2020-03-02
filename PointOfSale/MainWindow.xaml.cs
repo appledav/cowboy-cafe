@@ -21,10 +21,13 @@ namespace PointOfSale
     /// </summary>
     public partial class MainWindow : Window
     {
+        Order currentOrder = new Order();
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = new Order();
+
+            this.DataContext = currentOrder;
+            
         }
     }
 }

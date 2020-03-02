@@ -31,187 +31,37 @@ namespace PointOfSale
     /// </summary>
     public partial class OrderControl : UserControl
     {
-        Order currentOrder;
+       
         public OrderControl()
         {
-            currentOrder = new Order();
-            this.DataContext = currentOrder;
+
             InitializeComponent();
-            
-            AddCowpokeChili.Click += AddToOrderCowpokeChili;
-            AddAngryChicken.Click += AddToOrderAngryChicken;
-            AddBakedBeans.Click += AddToOrderBakedBeans;
-            AddChiliCheeseFries.Click += AddToOrderChiliCheeseFries;
-            AddCornDodgers.Click += AddToOrderCornDodgers;
-            AddCowboyCoffee.Click += AddToOrderCowboyCoffee;
-            AddDakotaDoubleBurger.Click += AddToOrderDakotaDoubleBurger;
-            AddJerkedSoda.Click += AddToOrderJerkedSoda;
-            AddPanDeCampo.Click += AddToOrderPanDeCampo;
-            AddPecosPulledPork.Click += AddToOrderPecosPulledPork;
-            AddRustlersRibs.Click += AddToOrderRustlersRibs;
-            AddTexasTea.Click += AddToOrderTexasTea;
-            AddTexasTripleBurger.Click += AddToOrderTexasTripleBurger;
-            AddTrailBurger.Click += AddToOrderTrailBurger;
-            AddWater.Click += AddToOrderWater;
+            //ItemSelection.Click += OnItemSelectionClick();
+            CompleteOrder.Click += OnCompleteOrderClick;
+            CancelOrder.Click += OnCancelOrderClick;
 
         }
 
         /// <summary>
-        /// The event handler to add a trailburger
+        /// Handler for the cancel order click
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        void AddToOrderTrailBurger(object sender, RoutedEventArgs e)
+        void OnCancelOrderClick(object sender, RoutedEventArgs e)
         {
-            //currentOrder.Add(new TrailBurger());
-            if (DataContext is Order data)
-            {
-                if (sender is Button button)
-                {
-                    data.Add(new TrailBurger());
-                }
-
-            }
+            this.DataContext = new Order();
         }
 
         /// <summary>
-        /// The event handler to add water
+        /// Handler for the Complete order click
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        void AddToOrderWater(object sender, RoutedEventArgs e)
+        void OnCompleteOrderClick(object sender, RoutedEventArgs e)
         {
-            currentOrder.Add(new Water());
+            this.DataContext = new Order();
         }
 
-        /// <summary>
-        /// Event handler for the texas triple
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        void AddToOrderTexasTripleBurger(object sender, RoutedEventArgs e)
-        {
-            currentOrder.Add(new TexasTripleBurger());
-        }
-
-        /// <summary>
-        /// Event handler for the Texas tea
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        void AddToOrderTexasTea(object sender, RoutedEventArgs e)
-        {
-            currentOrder.Add(new TexasTea());
-        }
-
-        /// <summary>
-        /// The event handler for the rustler ribs
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        void AddToOrderRustlersRibs(object sender, RoutedEventArgs e)
-        {
-            currentOrder.Add(new RustlersRibs());
-        }
-
-        /// <summary>
-        /// The event handler for the pulled pork
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        void AddToOrderPecosPulledPork(object sender, RoutedEventArgs e)
-        {
-            currentOrder.Add(new PecosPulledPork());
-        }
-
-        /// <summary>
-        /// The event handler for the pan de campo
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        void AddToOrderPanDeCampo(object sender, RoutedEventArgs e)
-        {
-            currentOrder.Add(new PanDeCampo());
-        }
-
-        /// <summary>
-        /// The event handler for the jerked soda
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        void AddToOrderJerkedSoda(object sender, RoutedEventArgs e)
-        {
-            currentOrder.Add(new JerkedSoda());
-        }
-
-        /// <summary>
-        /// The event handler for the dakota double burger
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        void AddToOrderDakotaDoubleBurger(object sender, RoutedEventArgs e)
-        {
-            currentOrder.Add(new DakotaDoubleBurger());
-        }
-
-        /// <summary>
-        /// the event handler for the cowboy coffee
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        void AddToOrderCowboyCoffee(object sender, RoutedEventArgs e)
-        {
-            currentOrder.Add(new CowboyCoffee());
-        }
-
-        /// <summary>
-        /// The event handler for the corn dodgers
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        void AddToOrderCornDodgers(object sender, RoutedEventArgs e)
-        {
-            currentOrder.Add(new CornDodgers());
-        }
-
-        /// <summary>
-        /// The event handler for the Chili Cheese fries
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        void AddToOrderChiliCheeseFries(object sender, RoutedEventArgs e)
-        {
-            currentOrder.Add(new ChiliCheeseFries());
-        }
-
-        /// <summary>
-        /// The event handler for the baked beans
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        void AddToOrderBakedBeans(object sender, RoutedEventArgs e)
-        {
-            currentOrder.Add(new BakedBeans());
-        }
-
-        /// <summary>
-        /// The event handler for the angry chicken
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        void AddToOrderAngryChicken(object sender, RoutedEventArgs e)
-        {
-            currentOrder.Add(new AngryChicken());
-        }
-
-        /// <summary>
-        /// the event handler for the cowpoke chili
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        void AddToOrderCowpokeChili(object sender, RoutedEventArgs e)
-        {
-            currentOrder.Add(new CowpokeChili());
-        }
+        
     }
 }
