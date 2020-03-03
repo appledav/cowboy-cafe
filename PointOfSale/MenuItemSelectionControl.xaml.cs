@@ -1,4 +1,15 @@
-﻿using System;
+﻿/*
+
+* Author: David Apple
+
+* Class name: MenuItemSelectionControl.xaml.cs
+
+* Purpose: This class implements all the click events for all the buttons
+*          on our window and has their logic 
+
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;

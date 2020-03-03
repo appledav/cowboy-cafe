@@ -1,4 +1,14 @@
-﻿using System;
+﻿/*
+
+* Author: David Apple
+
+* Class name: MainWindow.xaml.cs
+
+* Purpose: This class implements our main window of our WPF
+
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

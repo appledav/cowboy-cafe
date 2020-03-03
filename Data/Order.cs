@@ -1,4 +1,14 @@
-﻿using System;
+﻿/*
+
+* Author: David Apple
+
+* Class name: Order.cs
+
+* Purpose: This class implements an order being created by the customer
+
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel;
@@ -16,15 +26,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// A way of storing what order number we are on
         /// </summary>
-        public uint OrderNumber;
-
-        /// <summary>
-        /// Constructor to update order Number 
-        /// </summary>
-        public Order()
-        {
-            OrderNumber = lastOrderNumber++;
-        }
+        public static uint OrderNumber { get { return lastOrderNumber++; } }
 
         /// <summary>
         /// The event handler

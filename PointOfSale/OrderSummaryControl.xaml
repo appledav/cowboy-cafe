@@ -18,7 +18,13 @@
             <RowDefinition/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="60"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
         <TextBlock Grid.Row="0">Order</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="0" HorizontalAlignment="Stretch" Text="{Binding Path=OrderNumber}"/>
         <StackPanel Grid.Row="1">
             <ListView Height="500" ItemsSource="{Binding Path=Items}">
                 <ListView.ItemTemplate>
