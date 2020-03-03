@@ -1,4 +1,14 @@
-﻿using System;
+﻿/*
+
+* Author: David Apple
+
+* Class name: OrderSummaryControl.xaml.cs
+
+* Purpose: This class is the generation of our OrderSummaryControl window
+
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;

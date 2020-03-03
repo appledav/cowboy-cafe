@@ -47,7 +47,7 @@ namespace PointOfSale
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        void OnCancelOrderClick(object sender, RoutedEventArgs e)
+        private void OnCancelOrderClick(object sender, RoutedEventArgs e)
         {
             this.DataContext = new Order();
         }
@@ -57,7 +57,7 @@ namespace PointOfSale
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        void OnCompleteOrderClick(object sender, RoutedEventArgs e)
+        private void OnCompleteOrderClick(object sender, RoutedEventArgs e)
         {
             this.DataContext = new Order();
         }
