@@ -42,6 +42,11 @@ namespace PointOfSale
 
         }
 
+        public void SwapScreen(UIElement element)
+        {
+            Container.Child = element;
+        }
+
         /// <summary>
         /// Handler for the cancel order click
         /// </summary>

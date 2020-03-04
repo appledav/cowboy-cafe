@@ -22,6 +22,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CowboyCafe.Data;
+using PointOfSale.Extensions;
 
 namespace PointOfSale
 {
@@ -30,6 +31,7 @@ namespace PointOfSale
     /// </summary>
     public partial class MenuItemSelectionControl : UserControl
     {
+        private OrderControl orderControl;
         public MenuItemSelectionControl()
         {
 
@@ -49,6 +51,8 @@ namespace PointOfSale
             AddTexasTripleBurger.Click += AddToOrderTexasTripleBurger;
             AddTrailBurger.Click += AddToOrderTrailBurger;
             AddWater.Click += AddToOrderWater;
+
+            orderControl = this.FindAncestor<OrderControl>();
 
         }
 
@@ -250,9 +254,14 @@ namespace PointOfSale
         /// <param name="e"></param>
         void AddToOrderCowpokeChili(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order data)
             {
+                var entree = new CowpokeChili();
+                var screen = new CustomizeCowpokeChili();
+                screen.DataContext = entree;
                 data.Add(new CowpokeChili());
+                orderControl.SwapScreen(new CustomizeCowpokeChili());
             }
         }
 
