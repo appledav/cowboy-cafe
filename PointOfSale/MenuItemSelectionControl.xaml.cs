@@ -66,11 +66,15 @@ namespace PointOfSale
         /// <param name="e"></param>
         void AddToOrderTrailBurger(object sender, RoutedEventArgs e)
         {
-            //currentOrder.Add(new TrailBurger());
+
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order data)
             {
+                var entree = new TrailBurger();
+                var screen = new CustomizeTrailBurger();
+                screen.DataContext = entree;
                 data.Add(new TrailBurger());
-
+                orderControl.SwapScreen(new CustomizeTrailBurger());
             }
         }
 
@@ -81,9 +85,14 @@ namespace PointOfSale
         /// <param name="e"></param>
         void AddToOrderWater(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order data)
             {
+                var entree = new Water();
+                var screen = new CustomizeWater();
+                screen.DataContext = entree;
                 data.Add(new Water());
+                orderControl.SwapScreen(new CustomizeWater());
             }
 
         }
@@ -95,9 +104,14 @@ namespace PointOfSale
         /// <param name="e"></param>
         void AddToOrderTexasTripleBurger(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order data)
             {
+                var entree = new TexasTripleBurger();
+                var screen = new CustomizeTexasTripleBurger();
+                screen.DataContext = entree;
                 data.Add(new TexasTripleBurger());
+                orderControl.SwapScreen(new CustomizeTexasTripleBurger());
             }
         }
 
@@ -108,9 +122,14 @@ namespace PointOfSale
         /// <param name="e"></param>
         void AddToOrderTexasTea(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order data)
             {
+                var entree = new TexasTea();
+                var screen = new CustomizeTexasTea();
+                screen.DataContext = entree;
                 data.Add(new TexasTea());
+                orderControl.SwapScreen(new CustomizeTexasTea());
             }
         }
 
@@ -121,9 +140,14 @@ namespace PointOfSale
         /// <param name="e"></param>
         void AddToOrderRustlersRibs(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order data)
             {
+                var entree = new RustlersRibs();
+                var screen = new CustomizeRustlersRibs();
+                screen.DataContext = entree;
                 data.Add(new RustlersRibs());
+                orderControl.SwapScreen(new CustomizeRustlersRibs());
             }
         }
 
@@ -135,9 +159,14 @@ namespace PointOfSale
         /// <param name="e"></param>
         void AddToOrderPecosPulledPork(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order data)
             {
+                var entree = new PecosPulledPork();
+                var screen = new CustomizePecosPulledPork();
+                screen.DataContext = entree;
                 data.Add(new PecosPulledPork());
+                orderControl.SwapScreen(new CustomizePecosPulledPork());
             }
         }
 
@@ -149,9 +178,14 @@ namespace PointOfSale
         /// <param name="e"></param>
         void AddToOrderPanDeCampo(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order data)
             {
+                var entree = new PanDeCampo();
+                var screen = new CustomizePanDeCampo();
+                screen.DataContext = entree;
                 data.Add(new PanDeCampo());
+                orderControl.SwapScreen(new CustomizePanDeCampo());
             }
         }
 
@@ -162,9 +196,14 @@ namespace PointOfSale
         /// <param name="e"></param>
         void AddToOrderJerkedSoda(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order data)
             {
+                var entree = new JerkedSoda();
+                var screen = new CustomizeJerkedSoda();
+                screen.DataContext = entree;
                 data.Add(new JerkedSoda());
+                orderControl.SwapScreen(new CustomizeJerkedSoda());
             }
 
         }
@@ -176,9 +215,14 @@ namespace PointOfSale
         /// <param name="e"></param>
         void AddToOrderDakotaDoubleBurger(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order data)
             {
+                var entree = new DakotaDoubleBurger();
+                var screen = new CustomizeDakotaDoubleBurger();
+                screen.DataContext = entree;
                 data.Add(new DakotaDoubleBurger());
+                orderControl.SwapScreen(new CustomizeDakotaDoubleBurger());
             }
         }
 
@@ -189,9 +233,14 @@ namespace PointOfSale
         /// <param name="e"></param>
         void AddToOrderCowboyCoffee(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order data)
             {
+                var entree = new CowboyCoffee();
+                var screen = new CustomizeCowboyCoffee();
+                screen.DataContext = entree;
                 data.Add(new CowboyCoffee());
+                orderControl.SwapScreen(new CustomizeCowboyCoffee());
             }
         }
 
@@ -202,9 +251,14 @@ namespace PointOfSale
         /// <param name="e"></param>
         void AddToOrderCornDodgers(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order data)
             {
+                var entree = new CornDodgers();
+                var screen = new CustomizeCornDodgers();
+                screen.DataContext = entree;
                 data.Add(new CornDodgers());
+                orderControl.SwapScreen(new CustomizeCornDodgers());
             }
         }
 
@@ -215,9 +269,14 @@ namespace PointOfSale
         /// <param name="e"></param>
         void AddToOrderChiliCheeseFries(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order data)
             {
+                var entree = new ChiliCheeseFries();
+                var screen = new CustomizeChiliCheeseFries();
+                screen.DataContext = entree;
                 data.Add(new ChiliCheeseFries());
+                orderControl.SwapScreen(new CustomizeChiliCheeseFries());
             }
         }
 
@@ -228,9 +287,14 @@ namespace PointOfSale
         /// <param name="e"></param>
         void AddToOrderBakedBeans(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order data)
             {
+                var entree = new BakedBeans();
+                var screen = new CustomizeBakedBeans();
+                screen.DataContext = entree;
                 data.Add(new BakedBeans());
+                orderControl.SwapScreen(new CustomizeBakedBeans());
             }
         }
 
@@ -241,9 +305,14 @@ namespace PointOfSale
         /// <param name="e"></param>
         void AddToOrderAngryChicken(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order data)
             {
+                var entree = new AngryChicken();
+                var screen = new CustomizeAngryChicken();
+                screen.DataContext = entree;
                 data.Add(new AngryChicken());
+                orderControl.SwapScreen(new CustomizeAngryChicken());
             }
         }
 
