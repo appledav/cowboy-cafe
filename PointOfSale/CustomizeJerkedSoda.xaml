@@ -6,7 +6,41 @@
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+    <StackPanel>
+        <TextBlock FontSize="30" Text="Customize Jerked Soda"/>
+        <StackPanel Orientation="Horizontal">
+            <Label>Birch Beer</Label>
+            <CheckBox IsChecked="{Binding Path=BirchBeer}"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label>Cream Soda</Label>
+            <CheckBox IsChecked="{Binding Path=CreamSoda}"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label>Pickle</Label>
+            <CheckBox IsChecked="{Binding Path=Decaf}"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label>Cheese</Label>
+            <CheckBox IsChecked="{Binding Path=Cheese}"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label>Bun</Label>
+            <CheckBox IsChecked="{Binding Path=Bun}"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label>Tomato</Label>
+            <CheckBox IsChecked="{Binding Path=Tomato}"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label>Lettuce</Label>
+            <CheckBox IsChecked="{Binding Path=Lettuce}"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label>Mayo</Label>
+            <CheckBox IsChecked="{Binding Path=Mayo}"/>
+        </StackPanel>
+
+
+    </StackPanel>
 </UserControl>
